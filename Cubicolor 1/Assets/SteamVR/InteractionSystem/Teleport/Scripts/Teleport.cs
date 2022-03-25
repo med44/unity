@@ -15,8 +15,6 @@ namespace Valve.VR.InteractionSystem
     {
         public SteamVR_Action_Boolean teleportAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("Teleport");
 
-		public bool showHints = false;
-
         public LayerMask traceLayerMask;
 		public LayerMask floorFixupTraceLayerMask;
 		public float floorFixupMaximumTraceDistance = 1.0f;
@@ -151,8 +149,12 @@ namespace Valve.VR.InteractionSystem
 			pointerLineRenderer = GetComponentInChildren<LineRenderer>();
 			teleportPointerObject = pointerLineRenderer.gameObject;
 
-			int tintColorID = Shader.PropertyToID( "_TintColor" );
-			fullTintAlpha = pointVisibleMaterial.GetColor( tintColorID ).a;
+#if UNITY_URP
+			fullTintAlpha = 0.5f;
+#else
+			int tintColorID = Shader.PropertyToID("_TintColor");
+			fullTintAlpha = pointVisibleMaterial.GetColor(tintColorID).a;
+#endif
 
 			teleportArc = GetComponent<TeleportArc>();
 			teleportArc.traceLayerMask = traceLayerMask;
@@ -186,8 +188,7 @@ namespace Valve.VR.InteractionSystem
 
 			CheckForSpawnPoint();
 
-			if (showHints)
-				Invoke( "ShowTeleportHint", 5.0f );
+			Invoke( "ShowTeleportHint", 5.0f );
 		}
 
 
