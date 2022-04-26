@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637865373838875130
-    m_Hash: 3677408301
+      ticks: 637865385600971636
+    m_Hash: 651289792
   m_LockFileStatus:
     m_FilePath: C:/UnityProjects/Carlos_Cubes_Collab/CubicolorMAIN/unity/Cubicolor
       1/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637865373838935624
-    m_Hash: 1545171522
+      ticks: 637865385600981609
+    m_Hash: 3791053527
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -3388,7 +3388,7 @@ m_PackageAssets:
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
-        ticks: 637865365092761298
+        ticks: 637865384162101248
       m_Hash: 2919789393
 m_ProjectPath: C:/UnityProjects/Carlos_Cubes_Collab/CubicolorMAIN/unity/Cubicolor
   1/Packages
